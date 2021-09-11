@@ -46,16 +46,16 @@ To run the experiments, the directory format should match the following (the "co
 
 main/  
 ├─ data/  
-│  ├─ processed\_proposals/  
+│  ├─ processed_proposals/  
 │  ├─ convert.py  
 │  ├─ converted/  
-│  ├─ parsed\_programs/  
+│  ├─ parsed_programs/  
 │  ├─ questions/  
 │  │  ├─ train.json  
 │  │  ├─ validation.json  
 │  │  ├─ test.json  
 │  ├─ propnet_preds/  
-│  │  ├─ with\_edge\_supervision\_old/  
+│  │  ├─ with_edge_supervision_old/  
 ├─ descriptive/  
 ├─ explanatory/  
 ├─ predictive/  
