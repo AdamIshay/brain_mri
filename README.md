@@ -1,18 +1,24 @@
 ## Install requirements.
-We used Python 3.6 to run the code.
+We used Python 3.6 for our experiments.
 
 You can use the following to create a suitable Conda environment. 
 
 ### CREATE ENVIRONMENT  
 Create and activate Conda environment:  
+
 'conda create --name clevrer python=3.6'  
 'conda activate clevrer'  
+
 ### INSTALLATION  
 Install Clingo version (5.3.0 for now) and make sure that it is in your PATH variable. You run the following for this:  
+
 'conda install -c potassco clingo==5.3.0 '  
+
 Additionally, you will have to install Clyngor for calling Clingo in Python. You can install with:  
 'conda install -c conda-forge clyngor'  
+
 Install the rest of the requirements with:  
+
 'conda install -c conda-forge tqdm'  
 'conda install -c anaconda ipython'  
 'conda install -c anaconda nltk'  
@@ -21,20 +27,26 @@ Install the rest of the requirements with:
 'conda install -c conda-forge matplotlib'  
 ## Download data  
 
-Download the parsed programs into the 'parsed_programs' folder, along with the train.json, validation.json, and test.json into the 'questions' folder. You can get the files from:
+Download the parsed programs into the 'data/parsed_programs' folder, along with the train.json, validation.json, and test.json into the 'data/questions' folder. You can get the files from:
 https://github.com/chuangg/CLEVRER/tree/master/executor/data
 
-Download the results of the video frame parser and dynamic predictions here:
+Download the results of the dynamic predictions and the video frame parser from:
 https://github.com/chuangg/CLEVRER
 
-Specifically, two files are required which are linked in the "Get the data" section. (1) The dynamic predictions and (2) results of video frame parser (visual masks).
+(Look for the links in 
+
+"The dynamic predictions can be found here"
+and
+"The results of video frame parser (visual masks) can be found here.")
+
+and put them ('propnet_preds' and 'processed_proposals') under 'data' folder
 
 To run the experiments, the directory format should match the following:
 
 main/  
 ├─ data/  
 │  ├─ processed_proposals/  
-│  ├─ convert.py  
+│  ├─ convert.py (will be generated in the following step)
 │  ├─ converted/  
 │  ├─ parsed_programs/  
 │  ├─ questions/  
@@ -49,7 +61,7 @@ main/
 ├─ counterfactual/  
 ├─ merge.py  
 
-## Format mask r-cnn results:
+## Convert mask r-cnn results for Improved Object Detection:
 
 cd main/data'
 python convert.py'
