@@ -1,15 +1,16 @@
 ## Install requirements.
 We used Python 3.6 for our experiments.
 
-You can use the following to create a suitable Conda environment. 
-
-### CREATE ENVIRONMENT  
+You can use the following to create a suitable Conda environment.
+You can install the requirements in the "requirements.txt", or use Conda.
+### Conda
+#### CREATE ENVIRONMENT  
 Create and activate Conda environment:  
 
 'conda create --name clevrer python=3.6'  
 'conda activate clevrer'  
 
-### INSTALLATION  
+#### INSTALLATION  
 Install Clingo version (5.3.0 for now) and make sure that it is in your PATH variable. You run the following for this:  
 
 'conda install -c potassco clingo==5.3.0 '  
@@ -33,38 +34,38 @@ https://github.com/chuangg/CLEVRER/tree/master/executor/data
 Download the results of the dynamic predictions and the video frame parser from:
 https://github.com/chuangg/CLEVRER
 
-(Look for the links in 
+Look for the links in
 
-"The dynamic predictions can be found here"
+("The dynamic predictions can be found here"
 and
 "The results of video frame parser (visual masks) can be found here.")
 
-and put them ('propnet_preds' and 'processed_proposals') under 'data' folder
+and put them ('propnet_preds' and 'processed_proposals') under 'data' folder.
 
-To run the experiments, the directory format should match the following:
+To run the experiments, the directory format should match the following (the "converted" folder will be created after running the "convert.py" file in the next step):
 
 main/  
 ├─ data/  
-│  ├─ processed_proposals/  
-│  ├─ convert.py (will be generated in the following step)
+│  ├─ processed\_proposals/  
+│  ├─ convert.py  
 │  ├─ converted/  
-│  ├─ parsed_programs/  
+│  ├─ parsed\_programs/  
 │  ├─ questions/  
 │  │  ├─ train.json  
 │  │  ├─ validation.json  
 │  │  ├─ test.json  
 │  ├─ propnet_preds/  
-│  │  ├─ with_edge_supervision_old/  
+│  │  ├─ with\_edge\_supervision\_old/  
 ├─ descriptive/  
 ├─ explanatory/  
 ├─ predictive/  
 ├─ counterfactual/  
 ├─ merge.py  
 
-## Convert mask r-cnn results for Improved Object Detection:
-
-cd main/data'
-python convert.py'
+## Format mask r-cnn results:
+This will create the converted folder and populate it with IOD results.
+'cd main/data'
+'python convert.py'
 
 ## (optional) run question parser in the 'question_parser' directory. If not, the parsed programs from the baseline will be used (in step 2).
 
