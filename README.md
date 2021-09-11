@@ -3,11 +3,11 @@ We used Python 3.6 to run the code.
 
 You can use the following to create a suitable Conda environment. 
 
-###CREATE ENVIRONMENT  
+### CREATE ENVIRONMENT  
 Create and activate Conda environment:  
 'conda create --name clevrer python=3.6'  
 'conda activate clevrer'  
-###INSTALLATION  
+### INSTALLATION  
 Install Clingo version (5.3.0 for now) and make sure that it is in your PATH variable. You run the following for this:  
 'conda install -c potassco clingo==5.3.0 '  
 Additionally, you will have to install Clyngor for calling Clingo in Python. You can install with:  
