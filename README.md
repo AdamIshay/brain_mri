@@ -3,23 +3,23 @@ We used Python 3.6 to run the code.
 
 You can use the following to create a suitable Conda environment. 
 
-###CREATE ENVIRONMENT
-Create and activate Conda environment:
-'conda create --name clevrer python=3.6'
-'conda activate clevrer'
-###INSTALLATION
-Install Clingo version (5.3.0 for now) and make sure that it is in your PATH variable. You run the following for this:
-'conda install -c potassco clingo==5.3.0 '
-Additionally, you will have to install Clyngor for calling Clingo in Python. You can install with:
-'conda install -c conda-forge clyngor'
-Install the rest of the requirements with:
-'conda install -c conda-forge tqdm'
-'conda install -c anaconda ipython'
-'conda install -c anaconda nltk'
-'conda install -c anaconda numpy'
-'conda install -c conda-forge ipdb'
-'conda install -c conda-forge matplotlib'
-## Download data
+###CREATE ENVIRONMENT  
+Create and activate Conda environment:  
+'conda create --name clevrer python=3.6'  
+'conda activate clevrer'  
+###INSTALLATION  
+Install Clingo version (5.3.0 for now) and make sure that it is in your PATH variable. You run the following for this:  
+'conda install -c potassco clingo==5.3.0 '  
+Additionally, you will have to install Clyngor for calling Clingo in Python. You can install with:  
+'conda install -c conda-forge clyngor'  
+Install the rest of the requirements with:  
+'conda install -c conda-forge tqdm'  
+'conda install -c anaconda ipython'  
+'conda install -c anaconda nltk'  
+'conda install -c anaconda numpy'  
+'conda install -c conda-forge ipdb'  
+'conda install -c conda-forge matplotlib'  
+## Download data  
 
 Download the parsed programs into the 'parsed_programs' folder, along with the train.json, validation.json, and test.json into the 'questions' folder. You can get the files from:
 https://github.com/chuangg/CLEVRER/tree/master/executor/data
