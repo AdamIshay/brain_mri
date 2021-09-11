@@ -12,10 +12,10 @@ Specifically, two files are required which are linked in the "Get the data" sect
 
 To run the experiments, the directory format should match the following:
 
-main/
-├─ data/
-│  ├─ processed_proposals/
-│  ├─ convert.py
+main/  
+├─ data/  
+│  ├─ processed_proposals/  
+│  ├─ convert.py  
 │  ├─ converted/
 │  ├─ parsed_programs/
 │  ├─ questions/
